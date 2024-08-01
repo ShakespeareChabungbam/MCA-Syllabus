@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakespeare's MCA Syllabus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MCA Syllabus</h1>
+        <h2>Manipur University</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#semester1">Sem 1</a></li>
+            <li><a href="#semester2">Sem 2</a></li>
+            <li><a href="#semester3">Sem 3</a></li>
+            <li><a href="#semester4">Sem 4</a></li>
+        </ul>
+    </nav>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search subjects...">
+    </div>
+    <main>
+        <section id="semester1" class="semester">
+            <h3>Semester 1</h3>
+            <div class="accordion">
+                <button class="accordion-toggle">Object Oriented Programming using JAVA</button>
+                <div class="accordion-content">
+                    <p>Learn Java: The Complete Reference, Twelfth Edition Paperback – 23 December 2021 by Herbert Schildt</p>
+                    <a href="javabook.pdf" download>Download Book</a><br>
+                    <!-- <button class="read-btn" data-pdf="javabook.pdf">Read Book</button> -->
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-toggle">Mathematical Foundation for Computer Applications</button>
+                <div class="accordion-content">
+                    <p>Learn Ralph P Grimaldi, “Discrete & Combinatorial Mathematics,” 5th Edition, Pearson Education, 2004.</p>
+                    <a href="books/mathematics_for_computer_applications.pdf" download>Download Book</a><br>
+                    <!-- <button class="read-btn" data-pdf="books/mathematics_for_computer_applications.pdf">Read Book</button> -->
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-toggle">Problem Solving with Python</button>
+                <div class="accordion-content">
+                    <p>W3schools</p>
+                    <a href="https://www.w3schools.com/python/" download>Learn</a>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-toggle">Operating System</button>
+                <div class="accordion-content">
+                    <p>Learn Abraham Silberschatz, Peter Baer Galvin, Greg Gagne: Operating System Concepts, 10th Edition, Wiley India, 2018.(Listed topics only from Chapters 1 to 17, 20,21)</p>
+                    <a href="books/mathematics_for_computer_applications.pdf" download>Download Book</a><br>
+                    <!-- <button class="read-btn" data-pdf="books/mathematics_for_computer_applications.pdf">Read Book</button> -->
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-toggle">Advanced Web Technology</button>
+                <div class="accordion-content">
+                    <p>Learn Chris Bates: Web Programming Building Internet Applications, 3rd Edition, Wiley India, 2006 (Chapter 10,11,13)</p>
+                    <a href="books/mathematics_for_computer_applications.pdf" download>Download Book</a><br>
+                    <!-- <button class="read-btn" data-pdf="books/mathematics_for_computer_applications.pdf">Read Book</button> -->
+                    <p>Learn Robert W. Sebesta: Programming the World Wide Web, 4thEdition, Pearson Education, 2008. (Chapters 8,11,13, 14, 15) 3. Francis Shanahan: Mashups, Wiley India 2007(Chapters 1, 6)</p>
+                    <a href="books/mathematics_for_computer_applications.pdf" download>Download Book</a><br>
+                    <!-- <button class="read-btn" data-pdf="books/mathematics_for_computer_applications.pdf">Read Book</button> -->
+                </div>
+            </div>
+            <!-- Add more subjects in the same format -->
+        </section>
+        <!-- Add more semesters in the same format -->
+        <br><br><br><br><br>
+    </main>
+    <footer>
+        <p>&copy; 2024 Shakespeare's MCA Syllabus. All rights reserved.</p>
+        <button id="backToTop">Back to Top</button>
+    </footer>
+
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(45deg, #444, #666);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: slideIn 1.5s ease-out;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    animation: slideIn 2s ease-out;
+}
+
+nav {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+main {
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.semester {
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.semester:hover {
+    transform: scale(1.02);
+}
+
+.semester h3 {
+    font-size: 1.75rem;
+    color: #444;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.accordion {
+    margin-bottom: 1rem;
+}
+
+.accordion-toggle {
+    background: #eee;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.accordion-toggle:hover {
+    background: #ddd;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #f9f9f9;
+    padding: 0 1rem;
+    border-radius: 0 0 4px 4px;
+    border-top: 1px solid #ddd;
+}
+
+.accordion-content p {
+    margin: 0.5rem 0;
+}
+
+.accordion-content a,
+.accordion-content button {
+    color: #007aff; /* Apple active blue color */
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+}
+
+.accordion-content a::after,
+.accordion-content button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #007aff;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: right;
+}
+
+.accordion-content a:hover::after,
+.accordion-content button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #444;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#backToTop {
+    background: #666;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: none;
+}
+
+#backToTop:hover {
+    background: #444;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
